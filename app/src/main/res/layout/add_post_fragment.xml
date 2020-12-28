@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/clAddNewPost"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="40dp"
+    android:paddingTop="20dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/add_author_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:background="@drawable/same_image"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/btnAddPostTitle"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="Post Title"
+        android:background="@drawable/edit_text_curve"
+        android:elevation="3dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Post Title"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/cardView4"
+        app:layout_constraintTop_toTopOf="@+id/cardView4" />
+
+    <EditText
+        android:id="@+id/edAddPostBody"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        android:autofillHints="Post Body"
+        android:background="@drawable/edit_text_curve"
+        android:elevation="3dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Post Body"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/btnAddPostTitle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cardView4"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddPostTitle" />
+
+    <Button
+        android:id="@+id/btnSubmitPost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@color/colorPrimary"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edAddPostBody"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edAddPostBody"
+        app:layout_constraintTop_toBottomOf="@+id/edAddPostBody" />
+
+    <Button
+        android:id="@+id/btnCancelPost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/white"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edAddPostBody"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edAddPostBody"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubmitPost" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

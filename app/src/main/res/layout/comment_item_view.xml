@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cLComment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="#FFFFFF"
+    android:elevation="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp">
+
+    <!--    Comment Author Profile-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        app:cardCornerRadius="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivCommentProfileImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Comment Author"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_avatar"
+            app:srcCompat="@drawable/same_image" />
+    </androidx.cardview.widget.CardView>
+
+    <!--    Comment Author Name-->
+    <TextView
+        android:id="@+id/tvCommentAuthorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="John Doe"
+        android:textColor="#181818"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/cardView3"
+        app:layout_constraintTop_toTopOf="@+id/cardView3" />
+
+    <!--    Comment Body-->
+    <TextView
+        android:id="@+id/tvCommentBody"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        tools:text="non et atque\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\nquia voluptas consequuntur itaque dolor\net qui rerum deleniti ut occaecati"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+    <!--    Coment Date-->
+    <TextView
+        android:id="@+id/tvCommentDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="20th September 2020"
+        app:layout_constraintStart_toStartOf="@+id/tvCommentAuthorName"
+        app:layout_constraintTop_toBottomOf="@+id/tvCommentAuthorName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
